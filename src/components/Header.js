@@ -20,7 +20,7 @@ const Header = () => {
   };
   return (
     <React.Fragment>
-      <div className="bg-blue-950 relative px-4">
+      <div className="bg-blue-950 relative px-4 w-full">
         <div className="flex justify-between px-4 py-2 sm:px-6 lg:px-5">
           <div className="flex items-center space-x-3 lg:space-x-7">
             <MenuIcon
@@ -32,7 +32,7 @@ const Header = () => {
 
             <img
               src={Logo}
-              className="w-32 h-auto lg:w-42 lg:h-16 brightness-0 invert"
+              className="w-32 h-auto lg:w-44 lg:h-16 brightness-0 invert"
             />
           </div>
           <div className="hidden lg:flex  items-center space-x-4 ">

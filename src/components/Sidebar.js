@@ -19,7 +19,7 @@ const Sidebar = () => {
       <div
         className={`w-${
           isMenuOpen ? "1/5" : "14"
-        } min-h-screen overflow-y-auto transition-all duration-300 shadow-lg`}>
+        } min-h-screen overflow-y-auto hidden sm:block transition-all duration-300 shadow-lg `}>
         <div className="mt-10">
           <ul className="grid grid-cols-1 gap-y-2 ">
             {isMenuOpen && (

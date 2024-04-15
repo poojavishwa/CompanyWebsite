@@ -33,8 +33,8 @@ const Login = ({ onSubmit }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="">
+      <form onSubmit={handleSubmit} className="">
         <div className="">
           <div className="space-y-2 ">
             <h1 className="text-2xl font-bold">Hello Again!</h1>
@@ -60,16 +60,20 @@ const Login = ({ onSubmit }) => {
                 onChange={(e) => setPassword(e.target.value)}
                 className="border border-gray-400 p-2 w-72 rounded-md "
               />
-              <div className="absolute right-3 top-8">
-                {showPassword ? (
-                  <VisibilityIcon onClick={toggleIcon} />
-                ) : (
-                  <VisibilityOffIcon onClick={toggleIcon} />
-                )}
-              </div>
+              {showPassword ? (
+                <VisibilityIcon
+                  onClick={toggleIcon}
+                  className="absolute right-3 top-8"
+                />
+              ) : (
+                <VisibilityOffIcon
+                  onClick={toggleIcon}
+                  className="absolute right-3 top-8"
+                />
+              )}
             </div>
             <div className=" space-y-3">
-              <button className="bg-blue-950 w-full p-2 rounded-md text-white">
+              <button className="bg-blue-950 w-72 p-2 rounded-md text-white">
                 Login
               </button>
               {error && <p className="text-red-500 w-52 text-xs">{error}</p>}

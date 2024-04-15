@@ -16,6 +16,8 @@ import { MeetingRoom } from "./components/MeetingRoom";
 import { Setting } from "./components/Setting";
 import { AddDevice } from "./components/AddDevice";
 import { EditDevice } from "./components/EditDevice";
+import Header from "./components/Header";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -69,7 +71,7 @@ function App() {
               }
             />
             <Route path="/employee" element={<Employee />} />
-            <Route path="/addemployee" element={<EditDevice />} />
+            {/* <Route path="/addemployee" element={<Login />} /> */}
           </Routes>
         </Router>
       </Provider>

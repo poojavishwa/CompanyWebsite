@@ -7,11 +7,11 @@ const MainPage = () => {
   };
   return (
     <React.Fragment>
-      <div className="flex">
-        <div className="bg-blue-950 w-1/2 h-screen flex justify-center items-center">
-          <img src={Logo} className="w-[500px]" />
+      <div className="md:flex md:flex-row h-screen space-y-5">
+        <div className="bg-blue-950 md:w-1/2 w-full p-10 flex justify-center items-center">
+          <img src={Logo} className="w-[500px] " />
         </div>
-        <div className="flex m-44">
+        <div className=" flex justify-center items-center lg:w-1/2">
           <Login onSubmit={handleLogin} />
         </div>
       </div>

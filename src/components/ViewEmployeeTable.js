@@ -33,8 +33,8 @@ const ViewEmployeeTable = ({ employeeData }) => {
 
   return (
     <React.Fragment>
-      <div className="m-4 ">
-        <table className="w-full  md:min-w-max text-base text-left rtl:text-right text-gray-500 dark:text-gray-400 table-auto ">
+      <div className="m-4 overflow-x-auto">
+        <table className="w-full text-2xl md:text-base sm:text-base text-left rtl:text-right text-gray-500 dark:text-gray-400 table-auto ">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr className="">
               <th scope="col" class="px-6 py-3">
@@ -80,13 +80,6 @@ const ViewEmployeeTable = ({ employeeData }) => {
             ))}
           </tbody>
         </table>
-        <div>
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            paginate={paginate}
-          />
-        </div>
       </div>
       <Modal
         open={showModal}
@@ -98,6 +91,13 @@ const ViewEmployeeTable = ({ employeeData }) => {
         }}>
         <Optionsss employee={selectedEmployee} />
       </Modal>
+      <div>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          paginate={paginate}
+        />
+      </div>
     </React.Fragment>
   );
 };

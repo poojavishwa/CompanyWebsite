@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { Modal, Button } from "@mui/material";
-import { EditEmp } from "./EditEmp";
-import { DeleteEmp } from "./DeleteEmp";
-import { EditPassword } from "./EditPassword";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
+import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlined";
+import { EditDevice } from "./EditDevice";
+import { AssignDevice } from "./AssignDevice";
+import { DeleteDevice } from "./DeleteDevice";
 
-const Optionsss = ({ handleCloseOptionsss }) => {
+const DeviceOptionss = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);
@@ -37,12 +38,25 @@ const Optionsss = ({ handleCloseOptionsss }) => {
   };
   return (
     <React.Fragment>
-      <div className="w-60 border bg-white border-gray-100 m-10 h-[170px] p-5 space-y-2 shadow-xl">
-        <button className="bg-green-50 rounded-lg w-full flex justify-start">
+      <div className="w-60 p-4 border bg-white border-gray-100 m-10 h-[200px] space-y-2 shadow-xl">
+        <button className=" bg-green-50 rounded-lg w-full flex justify-start">
+          <div className="flex justify-start items-center">
+            <ManageAccountsOutlinedIcon sx={{ color: "green" }} />
+            <Button
+              onClick={handleOpenModal1}
+              style={{
+                color: "green",
+                padding: "6px",
+              }}>
+              Assign
+            </Button>
+          </div>
+        </button>
+        <button className="bg-gray-100 rounded-lg w-full flex justify-start">
           <div className="flex justify-start items-center">
             <BorderColorOutlinedIcon />
             <Button
-              onClick={handleOpenModal1}
+              onClick={handleOpenModal2}
               style={{
                 color: "black",
                 display: "flex",
@@ -57,7 +71,7 @@ const Optionsss = ({ handleCloseOptionsss }) => {
           <div className="flex justify-start items-center">
             <DeleteOutlineOutlinedIcon />
             <Button
-              onClick={handleOpenModal2}
+              onClick={handleOpenModal3}
               style={{
                 color: "red",
                 display: "flex",
@@ -70,14 +84,13 @@ const Optionsss = ({ handleCloseOptionsss }) => {
         </button>
         <button className=" bg-purple-100 rounded-lg w-full flex justify-start">
           <div className="flex justify-start items-center">
-            <LockOutlinedIcon />
+            <FileDownloadOutlinedIcon />
             <Button
-              onClick={handleOpenModal3}
               style={{
                 color: "black",
                 padding: "6px",
               }}>
-              Change Password
+              Download Bill
             </Button>
           </div>
         </button>
@@ -90,9 +103,8 @@ const Optionsss = ({ handleCloseOptionsss }) => {
           alignItems: "center",
           justifyContent: "center",
         }}>
-        <EditEmp notShow={handleCloseModal1} />
+        <AssignDevice notShow={handleCloseModal1} />
       </Modal>
-
       <Modal
         open={showModal2}
         onClose={handleCloseModal2}
@@ -101,9 +113,8 @@ const Optionsss = ({ handleCloseOptionsss }) => {
           alignItems: "center",
           justifyContent: "center",
         }}>
-        <DeleteEmp notShow={handleCloseModal2} />
+        <EditDevice notShow={handleCloseModal2} />
       </Modal>
-
       <Modal
         open={showModal3}
         onClose={handleCloseModal3}
@@ -112,9 +123,9 @@ const Optionsss = ({ handleCloseOptionsss }) => {
           alignItems: "center",
           justifyContent: "center",
         }}>
-        <EditPassword notShow={handleCloseModal3} />
+        <DeleteDevice notShow={handleCloseModal3} />
       </Modal>
     </React.Fragment>
   );
 };
-export default Optionsss;
+export default DeviceOptionss;

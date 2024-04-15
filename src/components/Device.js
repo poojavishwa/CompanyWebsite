@@ -21,7 +21,7 @@ const Device = () => {
             <h1 className="text-2xl font-bold text-blue-950">Device</h1>
             <p className="text-gray-400 text-sm">44 Devices</p>
           </div>
-          <div className="mt-4 sm:mt-0 flex items-center">
+          <div className="mt-4 sm:mt-0 flex items-center sm:gap-0 gap-4 flex-col sm:flex-row">
             <div className="relative">
               <input
                 type="text"
