@@ -64,7 +64,7 @@ const ViewEmployeeTable = ({ employeeData }) => {
                 <td className="px-6 py-4">{employee.email}</td>
                 <td className="px-6 py-4">
                   {employee.status === "Active" ? (
-                    <ToggleOnIcon />
+                    <ToggleOnIcon sx={{ color: "green" }} />
                   ) : (
                     <ToggleOffIcon />
                   )}

@@ -3,11 +3,11 @@ import CloseIcon from "@mui/icons-material/Close";
 export const EditEmp = ({ notShow }) => {
   return (
     <React.Fragment>
-      <div className="w-[30%] h-96 m-10 border border-gray-100 bg-white">
-        <form className="p-5">
-          <div className="flex justify-between">
+      <div className="md:w-[30%] w-[50%]  md:h-96 h-[400px] m-10 border border-gray-100 bg-white">
+        <form className="md:p-5 p-4">
+          <div className="flex justify-between ">
             <h1 className="text-xl font-bold text-black">Edit Employee</h1>
-            <CloseIcon onClick={notShow} />
+            <CloseIcon onClick={notShow} className="" />
           </div>
           <div className="mt-5 space-y-4">
             <div className="flex flex-col">

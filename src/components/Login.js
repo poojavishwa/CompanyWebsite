@@ -73,9 +73,11 @@ const Login = ({ onSubmit }) => {
               )}
             </div>
             <div className=" space-y-3">
-              <button className="bg-blue-950 w-72 p-2 rounded-md text-white">
-                Login
-              </button>
+              <Link to="/dashboard">
+                <button className="bg-blue-950 w-72 p-2 rounded-md text-white">
+                  Login
+                </button>
+              </Link>
               {error && <p className="text-red-500 w-52 text-xs">{error}</p>}
               <Link to="/forgotpassword">
                 <p className="cursor-pointer mt-3">Forgot Password?</p>

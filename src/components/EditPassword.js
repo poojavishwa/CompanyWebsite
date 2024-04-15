@@ -27,7 +27,7 @@ export const EditPassword = ({ notShow }) => {
   };
   return (
     <React.Fragment>
-      <div className="w-[30%] bg-white h-96 m-10 border border-gray-100 p-4  ">
+      <div className="sm:w-[30%] w-[70%] bg-white md:h-96 h-[400px] m-10 border border-gray-100 sm:p-4 p-6 ">
         <div className=" space-y-3">
           <div className="flex justify-between">
             <h1 className="text-xl font-bold">Change Password</h1>
