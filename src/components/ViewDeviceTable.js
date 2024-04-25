@@ -76,7 +76,7 @@ const ViewDeviceTable = ({ deviceData }) => {
                 <td className="px-6 py-4">{device.category}</td>
                 <td className="px-6 py-4">
                   {device.status === "Active" ? (
-                    <ToggleOnIcon />
+                    <ToggleOnIcon sx={{ color: "green" }} />
                   ) : (
                     <ToggleOffIcon />
                   )}

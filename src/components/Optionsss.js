@@ -7,7 +7,7 @@ import { EditEmp } from "./EditEmp";
 import { DeleteEmp } from "./DeleteEmp";
 import { EditPassword } from "./EditPassword";
 
-const Optionsss = ({ handleCloseOptionsss }) => {
+const Optionsss = () => {
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);

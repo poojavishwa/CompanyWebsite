@@ -1,7 +1,7 @@
 const deviceData = [
   {
     id: 1,
-    image: "Laptop1.png",
+    image: "/Laptop1.png",
     name: "Laptop",
     category: "Computer",
     status: "Active",
@@ -10,6 +10,7 @@ const deviceData = [
   },
   {
     id: 2,
+    image: "/printer1.jpg",
     name: "Printer",
     category: "Peripheral",
     status: "Inactive",
@@ -18,6 +19,7 @@ const deviceData = [
   },
   {
     id: 3,
+    image: "/mobile.jpg",
     name: "Smartphone",
     category: "Mobile Device",
     status: "Active",
@@ -26,6 +28,7 @@ const deviceData = [
   },
   {
     id: 4,
+    image: "/tab.jpg",
     name: "Tablet",
     category: "Mobile Device",
     status: "Active",
@@ -34,6 +37,7 @@ const deviceData = [
   },
   {
     id: 5,
+    image: "/moniter.jpg",
     name: "Monitor",
     category: "Peripheral",
     status: "Active",

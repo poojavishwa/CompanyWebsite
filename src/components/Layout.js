@@ -8,7 +8,7 @@ function Layout({ children }) {
       <Header />
       <div className="flex">
         <Sidebar />
-        <main className=" w-[85%] m-4">{children}</main>
+        <main className=" w-[84%] m-4">{children}</main>
       </div>
     </div>
   );
